@@ -99,7 +99,7 @@ function Calendar(
     startWeekOnMonday,
   } = props
   const scrollMode =
-    mode === 'range' || mode === 'multiple' ? 'vertical' : 'horizontal'
+    mode === 'range' || mode === 'single' || mode === 'multiple' ? 'vertical' : 'horizontal'
   const firstDate = startDate || date || dates?.[0]
 
   const theme = useTheme()
