@@ -23,6 +23,7 @@ interface DatePickerModalProps {
   disableStatusBarPadding?: boolean
   inputEnabled?: boolean
   presentationStyle?: 'pageSheet' | 'overFullScreen'
+  scrollType?: 'horizontal' | 'vertical'
 }
 
 export interface DatePickerModalSingleProps
