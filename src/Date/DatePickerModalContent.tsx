@@ -38,7 +38,6 @@ interface DatePickerModalContentBaseProps {
   disableSafeTop?: boolean
   disableStatusBar?: boolean
   statusBarOnTopOfBackdrop?: boolean
-  scrollType?: 'horizontal' | 'vertical'
 }
 
 export interface DatePickerModalContentRangeProps
@@ -199,7 +198,6 @@ export function DatePickerModalContent(
             startYear={startYear}
             endYear={endYear}
             startWeekOnMonday={startWeekOnMonday}
-            scrollType={props.scrollType}
           />
         }
         calendarEdit={

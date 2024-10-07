@@ -41,7 +41,6 @@ export type BaseCalendarProps = {
   startDate?: CalendarDate
   endDate?: CalendarDate
   dateMode?: 'start' | 'end'
-  scrollType?: 'horizontal' | 'vertical'
 }
 
 export type CalendarDate = Date | undefined
@@ -98,9 +97,11 @@ function Calendar(
     validRange,
     dateMode,
     startWeekOnMonday,
-    scrollType,
   } = props
-  const scrollMode = scrollType || 'horizontal'
+  const scrollMode =
+    mode === 'range' || mode === 'single' || mode === 'multiple'
+      ? 'vertical'
+      : 'horizontal'
   const firstDate = startDate || date || dates?.[0]
 
   const theme = useTheme()
